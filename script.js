@@ -46,19 +46,6 @@ var saveButton16 = $("#save-16");
 var saveButton17 = $("#save-17");
 var saveButton18 = $("#save-18");
 
-
-// ************Create saveButtons************
-// function createVariables() {
-//     var saveButton = [];
-//     for (let i = 9; i <= 18; i++) {
-//         saveButton[i] = $("#save-" + i)
-//     };
-//     return saveButton;
-// };
-// var saveButtons = createVariables();
-// createVariables();
-// ************Create saveButtons************
-
 console.log("current hour", now)
 
 var appointments = [];
@@ -182,17 +169,6 @@ saveButton18.on("click", function (event) {
     localStorage.setItem(appointmentList[9].time, savedAppt18);
     alert("appointment saved");
 });
-// ********************Trying to save schedule content with a for loop********************
-// for (let i = 9; i <= 18; i++) {
-//     var apptCont[i] = document.getElementById("i");
-//     saveButton[i].on("click", function (event) {
-//         event.preventDefault();
-//         console.log("save" i "has been pushed.")
-//         var savedAppt[i] = apptCont[i].value ;
-//         localStorage.setItem([i], JSON.stringify(savedAppt[i]));
-//         alert("appointment saved");
-// })
-// };
 
 for (let i = 9; i <= 18; i++) {
     var textArea = $("#" + i)
@@ -207,8 +183,6 @@ for (let i = 9; i <= 18; i++) {
         textArea.addClass("future")
     }
 };
+
 init();
 
-// if i is < now = past
-// if i = now =present
-// if i > now= future
