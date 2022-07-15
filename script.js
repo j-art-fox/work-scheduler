@@ -42,6 +42,8 @@ var appointmentList = [
     ];
 
 var now = moment().hour();
+var today = moment().format('dddd'+", "+'MMMM Do YYYY');
+var currentDayEl= $("#currentDay");
 var appointments = [];
 var saveButton9 = $("#save-9");
 var saveButton10 = $("#save-10");
@@ -71,9 +73,10 @@ console.log("current hour", now)
 
 var appointments = [];
 
-function renderAppointments (){
-
+function renderDate (){
+ currentDayEl.append(today);
 };
+renderDate();
 
 function init() {
     var svdapt9 = localStorage.getItem('9:00');
