@@ -1,49 +1,39 @@
 var appointmentList = [
     {
-        time:"9:00",
-        appointment:apptCont9
+        time: "9:00",
     },
     {
-        time:"10:00",
-        appointment:apptCont10
+        time: "10:00",
     },
     {
-        time:"11:00",
-        appointment:apptCont11
+        time: "11:00",
     },
     {
-        time:"12:00",
-        appointment:apptCont12
+        time: "12:00",
     },
     {
-        time:"13:00",
-        appointment:apptCont13
+        time: "13:00",
     },
     {
-        time:"14:00",
-        appointment:apptCont14
+        time: "14:00",
     },
     {
-        time:"15:00",
-        appointment:apptCont15
+        time: "15:00",
     },
     {
-        time:"16:00",
-        appointment:apptCont16
+        time: "16:00",
     },
     {
-        time:"17:00",
-        appointment:apptCont17
+        time: "17:00",
     },
     {
-        time:"18:00",
-        appointment:apptCont18
+        time: "18:00",
     }
-    ];
+];
 
 var now = moment().hour();
-var today = moment().format('dddd'+", "+'MMMM Do YYYY');
-var currentDayEl= $("#currentDay");
+var today = moment().format('dddd' + ", " + 'MMMM Do YYYY');
+var currentDayEl = $("#currentDay");
 var appointments = [];
 var saveButton9 = $("#save-9");
 var saveButton10 = $("#save-10");
@@ -73,8 +63,8 @@ console.log("current hour", now)
 
 var appointments = [];
 
-function renderDate (){
- currentDayEl.append(today);
+function renderDate() {
+    currentDayEl.append(today);
 };
 renderDate();
 
@@ -107,7 +97,7 @@ var apptCont9 = document.getElementById("9");
 saveButton9.on("click", function (event) {
     event.preventDefault();
     console.log("save 9 has been pushed.")
-    var savedAppt9 = apptCont9.value ;
+    var savedAppt9 = apptCont9.value;
     localStorage.setItem(appointmentList[0].time, savedAppt9);
     alert("appointment saved");
 });
@@ -116,7 +106,7 @@ var apptCont10 = document.getElementById("10");
 saveButton10.on("click", function (event) {
     event.preventDefault();
     console.log("save 10 has been pushed.")
-    var savedAppt10 = apptCont10.value ;
+    var savedAppt10 = apptCont10.value;
     localStorage.setItem(appointmentList[1].time, savedAppt10);
     alert("appointment saved");
 });
@@ -125,7 +115,7 @@ var apptCont11 = document.getElementById("11");
 saveButton11.on("click", function (event) {
     event.preventDefault();
     console.log("save 11 has been pushed.")
-    var savedAppt11 = apptCont11.value ;
+    var savedAppt11 = apptCont11.value;
     localStorage.setItem(appointmentList[2].time, savedAppt11);
     alert("appointment saved");
 });
@@ -134,7 +124,7 @@ var apptCont12 = document.getElementById("12");
 saveButton12.on("click", function (event) {
     event.preventDefault();
     console.log("save 12 has been pushed.")
-    var savedAppt12 = apptCont12.value ;
+    var savedAppt12 = apptCont12.value;
     localStorage.setItem(appointmentList[3].time, savedAppt12);
     alert("appointment saved");
 });
@@ -143,7 +133,7 @@ var apptCont13 = document.getElementById("13");
 saveButton13.on("click", function (event) {
     event.preventDefault();
     console.log("save 13 has been pushed.")
-    var savedAppt13 = apptCont13.value ;
+    var savedAppt13 = apptCont13.value;
     localStorage.setItem(appointmentList[4].time, savedAppt13);
     alert("appointment saved");
 });
@@ -152,7 +142,7 @@ var apptCont14 = document.getElementById("14");
 saveButton14.on("click", function (event) {
     event.preventDefault();
     console.log("save 14 has been pushed.")
-    var savedAppt14 = apptCont14.value ;
+    var savedAppt14 = apptCont14.value;
     localStorage.setItem(appointmentList[5].time, savedAppt14);
     alert("appointment saved");
 });
@@ -161,7 +151,7 @@ var apptCont15 = document.getElementById("15");
 saveButton15.on("click", function (event) {
     event.preventDefault();
     console.log("save 15 has been pushed.")
-    var savedAppt15 = apptCont15.value ;
+    var savedAppt15 = apptCont15.value;
     localStorage.setItem(appointmentList[6].time, savedAppt15);
     alert("appointment saved");
 });
@@ -170,7 +160,7 @@ var apptCont16 = document.getElementById("16");
 saveButton16.on("click", function (event) {
     event.preventDefault();
     console.log("save 16 has been pushed.")
-    var savedAppt16 = apptCont16.value ;
+    var savedAppt16 = apptCont16.value;
     localStorage.setItem(appointmentList[7].time, savedAppt16);
     alert("appointment saved");
 });
@@ -179,7 +169,7 @@ var apptCont17 = document.getElementById("17");
 saveButton17.on("click", function (event) {
     event.preventDefault();
     console.log("save 17 has been pushed.")
-    var savedAppt17 = apptCont17.value ;
+    var savedAppt17 = apptCont17.value;
     localStorage.setItem(appointmentList[8].time, savedAppt17);
     alert("appointment saved");
 });
@@ -188,7 +178,7 @@ var apptCont18 = document.getElementById("18");
 saveButton18.on("click", function (event) {
     event.preventDefault();
     console.log("save 18 has been pushed.")
-    var savedAppt18 = apptCont18.value ;
+    var savedAppt18 = apptCont18.value;
     localStorage.setItem(appointmentList[9].time, savedAppt18);
     alert("appointment saved");
 });
@@ -218,6 +208,7 @@ for (let i = 9; i <= 18; i++) {
     }
 };
 init();
+
 // if i is < now = past
 // if i = now =present
 // if i > now= future
